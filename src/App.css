@@ -1,0 +1,188 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Space Grotesk", sans-serif;
+}
+
+:root {
+  --bg-primary: #fff;
+  --color-primary: #252b32;
+  --dark-gradient: linear-gradient(
+    90deg,
+    rgba(54, 54, 64, 1) 0%,
+    rgba(76, 115, 115, 1) 100%
+  );
+  --light-gradient: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(224, 255, 244, 1) 100%
+  );
+}
+
+/* Navbar CSS */
+nav {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  width: 100%;
+  min-height: 80px;
+  padding: 20px 50px;
+  font-size: 1.8rem;
+  letter-spacing: 3px;
+  word-spacing: 6px;
+  word-wrap: break-word;
+  color: rgb(53, 231, 199);
+  border-bottom: 3px solid rgb(191, 87, 27);
+  background: rgb(54, 54, 64);
+  background: var(--dark-gradient);
+  flex-wrap: wrap;
+
+  @media (max-width: 300px) {
+    font-size: 1.3rem;
+  }
+}
+
+.logo-name {
+  font-family: "Satisfy", cursive;
+}
+
+.logoContainer {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo {
+  width: 100%;
+  height: 100%;
+}
+/* CSS for Unit Navigation */
+.unitContainer {
+  width: 100%;
+  min-height: 70px;
+  background-color: var(--bg-primary);
+  color: var(--color-primary);
+  padding: 30px 50px;
+  background: rgb(255, 255, 255);
+  background: var(--light-gradient);
+}
+.unitTypes {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 100%;
+}
+.unitTypes * {
+  list-style-type: none;
+  letter-spacing: 3px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  height: 40px;
+  padding: 10px 7px;
+  border-radius: 5px;
+}
+.activeUnit {
+  border-bottom: 3px solid rgb(38, 118, 46);
+  /* border-top: 3px solid rgb(38, 118, 46); */
+}
+
+.units:hover {
+  transform: scale(1.05);
+  color: rgb(122, 152, 181);
+  transition: all 0.5s ease-out;
+}
+
+/*  CSS for Unit Converter Component */
+.unit-converter-container {
+  background-color: var(--bg-primary);
+  width: 100%;
+  min-height: calc(100vh - 80px - 70px);
+  max-height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  background: rgb(255, 255, 255);
+  background: var(--light-gradient);
+}
+
+.unit-converter {
+  background-color: inherit;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  padding: 50px;
+}
+.box {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+label {
+  letter-spacing: 3px;
+  font-size: 1.2rem;
+  color: var(--color-primary);
+}
+input {
+  background-color: var(--bg-primary);
+  color: var(--color-primary);
+  border: 2px solid var(--color-primary);
+  padding: 7px 20px;
+  outline: none;
+  font-size: 1.3rem;
+  border-radius: 5px;
+  width: 100%;
+}
+
+input:disabled {
+  cursor: not-allowed;
+}
+
+/* Remove the arrow from input field of type number */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+select {
+  padding: 5px 20px;
+  background-color: var(--bg-primary);
+  color: var(--color-primary);
+  cursor: pointer;
+  font-size: 1.2rem;
+  border-radius: 5px;
+  border: 2px solid var(--color-primary);
+}
+
+.resultContainer {
+  color: var(--color-primary);
+  display: flex;
+  justify-content: center;
+  min-height: 70px;
+  padding: 10px 20px;
+  letter-spacing: 3px;
+  font-size: 1.4rem;
+}
+
+.red {
+  color: red;
+}
+
+.footer {
+  width: 100%;
+  min-height: 70px;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  padding: 20px 50px;
+  background: var(--dark-gradient);
+  color: white;
+  border-top: 3px solid rgb(191, 87, 27);
+  letter-spacing: 3px;
+}
